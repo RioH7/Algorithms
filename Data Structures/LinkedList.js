@@ -1,21 +1,4 @@
-class Node { 
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-    }
-
-    setNextNode(node) {
-        if(node instanceof Node || node === null) {
-            this.next = node;
-        } else {
-            throw new Error('Next node must be a member of the Node class.')
-        }
-        this.next = node;
-    }
-    getNextNode() {
-        return this.next;
-    }
-}
+const Node = require('./Node');
 
 class LinkedList {
     constructor(){
@@ -89,17 +72,3 @@ class LinkedList {
         node2.setNextNode(temp); 
     }
 }
-
-const seasons = new LinkedList();
-seasons.addToHead(5);
-seasons.addToHead(4);
-seasons.addToHead(3);
-seasons.addToTail(6);
-// <head> 3 4 5 6 <tail>
-seasons.printList();
-
-seasons.swapNodes(3, 5);
-// 5 4 3 6
-seasons.printList();
-
-
