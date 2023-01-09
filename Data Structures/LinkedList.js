@@ -72,3 +72,5 @@ class LinkedList {
         node2.setNextNode(temp); 
     }
 }
+
+module.exports = LinkedList;
